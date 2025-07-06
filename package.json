@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/cytoscape": "^3.21.9",
     "cytoscape": "^3.32.0",
     "renovate": "^41.23.1",
     "vue": "^3.5.17"
