@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, watch, onMounted, onBeforeUnmount } from "vue";
-import cytoscape, { Core, ElementsDefinition } from "cytoscape";
+import cytoscape, { type Core, type ElementsDefinition } from "cytoscape";
 
 const props = defineProps<{
   elements: ElementsDefinition;
