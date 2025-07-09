@@ -1,30 +1,28 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import type { ElementsDefinition } from "cytoscape";
 import CytoscapeRenderer from "./components/CytoscapeRenderer.vue";
 
-const elements = [
-  {
-    data: { id: "a" },
-  },
-  {
-    data: { id: "b" },
-  },
-  {
-    data: { id: "ab", source: "a", target: "b" },
-  },
-];
+const elements: ElementsDefinition = {
+  nodes: [
+    {
+      data: { id: "a" },
+    },
+    {
+      data: { id: "b" },
+    },
+  ],
+  edges: [
+    {
+      data: { id: "ab", source: "a", target: "b" },
+    },
+  ],
+};
 </script>
 
 <template>
   <v-layout>
     <v-app-bar prominent>
-      <template #prepend>
-        <v-app-bar-nav-icon
-          data-testid="main-menu-btn"
-          color="primary"
-          @click="switchNavigationDrawer"
-        />
-      </template>
+      <template #prepend> </template>
 
       <template #title>
         <v-app-bar-title> Graph Layout Lab </v-app-bar-title>

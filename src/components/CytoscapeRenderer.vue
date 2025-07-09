@@ -1,11 +1,16 @@
 <script setup lang="ts">
-import { ref, watch, onMounted, onBeforeUnmount } from "vue";
-import cytoscape, { type Core, type ElementsDefinition } from "cytoscape";
+import { watch, onMounted, onBeforeUnmount } from "vue";
+import cytoscape, {
+  type Core,
+  type ElementsDefinition,
+  type LayoutOptions,
+  type StylesheetJson,
+} from "cytoscape";
 
 const props = defineProps<{
   elements: ElementsDefinition;
-  layout?: object;
-  style?: object[];
+  layout?: LayoutOptions;
+  style?: StylesheetJson;
 }>();
 
 let cy: Core | null = null;
